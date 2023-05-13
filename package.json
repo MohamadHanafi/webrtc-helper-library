@@ -1,0 +1,27 @@
+{
+  "name": "webrtc-helper-library",
+  "version": "1.0.0",
+  "description": "A helper typescript library to use webrtc in frontend applications",
+  "main": "index.js",
+  "repository": "git@github.com:MohamadHanafi/webrtc-helper-library.git",
+  "author": "Mohamad Hanafi",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.4",
+    "html-webpack-plugin": "^5.5.1",
+    "prettier": "^2.8.8",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "@types/webrtc": "^0.0.35"
+  }
+}
