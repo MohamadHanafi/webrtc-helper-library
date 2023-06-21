@@ -1,6 +1,6 @@
 import { PeerConstructor, StreamOptions } from "./interface/index";
 
-export class Peer {
+export default class Peer {
   initiator: boolean;
   peer: RTCPeerConnection;
   localStream: MediaStream;

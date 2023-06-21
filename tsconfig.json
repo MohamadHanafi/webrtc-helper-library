@@ -2,9 +2,11 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "CommonJS",
     "target": "es5",
-    "allowJs": true
+    "allowJs": true,
+    "declaration": true,
+    "outDir": "dist"
   },
   "files": ["src/index.ts"]
 }
