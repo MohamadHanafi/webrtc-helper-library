@@ -39,10 +39,11 @@ export default class Peer {
     this.peer = new RTCPeerConnection(config);
     this.remoteStream = new MediaStream();
     this.addTracks();
+    this.addListeners();
   }
 
   debugHandler(message: string) {
-    this.enableDebugMode && console.log(message);
+    this.enableDebugMode && console.log("[WebRTC] ", message);
   }
 
   addTracks() {
@@ -112,5 +113,11 @@ export default class Peer {
   onConnectionStateChange() {
     this.debugHandler(`Running onConnectionStateChange`);
     this.peer.onconnectionstatechange = this.onConnectionStateChangeHandler;
+  }
+
+  addListeners() {
+    this.onTrack();
+    this.onIceCandidate();
+    this.onConnectionStateChange();
   }
 }
